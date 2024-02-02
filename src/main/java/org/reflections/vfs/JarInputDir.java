@@ -71,7 +71,7 @@ public class JarInputDir implements Vfs.Dir {
         try { if (jarInputStream != null) ((InputStream) jarInputStream).close(); }
         catch (IOException e) {
             if (Reflections.log != null) {
-                Reflections.log.warn("Could not close InputStream", e);
+                Reflections.log.warning("Could not close InputStream, exception: " + e);
             }
         }
     }
